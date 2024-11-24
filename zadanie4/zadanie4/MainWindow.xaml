@@ -1,0 +1,14 @@
+﻿<Window x:Class="Program.OknoGalerii"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Galeria" Height="450" Width="800" Background="Lavender">
+    <Grid Margin="10">
+        <Image x:Name="Obrazek" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="Uniform" />
+
+        <Button Content="Poprzednie" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="100" Height="40" Margin="10"
+                Background="Green" Foreground="White" FontWeight="Bold" Click="PrzyciskPoprzednie_Click"/>
+
+        <Button Content="Następne" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="100" Height="40" Margin="10"
+                Background="Green" Foreground="White" FontWeight="Bold" Click="PrzyciskNastepne_Click"/>
+    </Grid>
+</Window>
