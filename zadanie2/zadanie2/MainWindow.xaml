@@ -1,0 +1,46 @@
+﻿<Window x:Class="Pensja.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Kalkulator" Height="350" Width="400" Background="Lavender">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Kalkulator Podatku" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" Margin="10" Foreground="Green" Grid.Row="0"/>
+
+        <TextBlock Text="Wpisz pensję brutto:" FontSize="14" HorizontalAlignment="Left" Margin="59,8,0,12" Foreground="green" Grid.Row="1"/>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,8,0,0" Grid.Row="1">
+            <TextBox x:Name="txtBrutto" Width="180" FontSize="14"/>
+            <Button Content="Oblicz" Width="70" Margin="5" Click="Oblicz" Background="Green" Foreground="White"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,8,0,0" Grid.Row="2">
+            <RadioButton x:Name="radioButton8_5" Content="8.5%" Margin="5" Checked="Check" />
+            <RadioButton x:Name="radioButton12" Content="12%" Margin="5" Checked="Check" IsChecked="True"/>
+            <RadioButton x:Name="radioButton19" Content="19%" Margin="5" Checked="Check" />
+        </StackPanel>
+
+        <Grid Grid.Row="3" Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0" Margin="5">
+                <TextBlock Text="Pensje Brutto" FontWeight="Bold" Margin="0,0,0,5" Foreground="Green"/>
+                <ListBox x:Name="listBrutto" Height="100"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="1" Margin="5">
+                <TextBlock Text="Pensje Netto" FontWeight="Bold" Margin="0,0,0,5" Foreground="Green"/>
+                <ListBox x:Name="listNetto" Height="100"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
