@@ -1,0 +1,25 @@
+﻿<Window x:Class="MediaPlayerApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Odtwarzacz" Height="450" Width="600">
+    <Grid>
+        <!-- Przycisk Otwórz -->
+        <Button Name="przyciskOtworz" Content="Otwórz" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Height="30" Click="PrzyciskOtworz_Click" Margin="10,10,0,0"/>
+
+        <!-- Kontrolka do odtwarzania wideo lub audio -->
+        <MediaElement Name="mediaElement" Height="300" Margin="0,49,0,85" LoadedBehavior="Manual" UnloadedBehavior="Manual" MediaOpened="MediaElement_MediaOpened" MediaEnded="MediaElement_MediaEnded" />
+
+        <!-- Przycisk Play/Pause -->
+        <Button Name="przyciskPlayPause" Content="Start" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="80" Height="30" Margin="10,0,0,10" Click="PrzyciskPlayPause_Click" />
+
+        <!-- Przycisk Stop -->
+        <Button Name="przyciskStop" Content="Zatrzymaj" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="80" Height="30" Margin="100,0,0,10" Click="PrzyciskStop_Click" />
+
+        <!-- Suwak postępu -->
+        <Slider Name="sliderPostep" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Height="20" Margin="200,0,10,40" ValueChanged="SliderPostep_ValueChanged" />
+
+        <!-- Etykieta "Głośność" i suwak głośności -->
+        <TextBlock Name="textVolume" Text="Głośność" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="200,0,0,10" FontSize="14" />
+        <Slider Name="sliderGlosnosc" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="150" Height="20" Margin="273,0,0,10" ValueChanged="SliderGlosnosc_ValueChanged" />
+    </Grid>
+</Window>
